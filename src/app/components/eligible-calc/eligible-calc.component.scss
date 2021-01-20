@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap");
+
+$label-color: #222222;
+$value-color: #222222;
+$limit-color: #c0c0c0;
+
+.container {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  .first-container {
+    background-color: white;
+    width: 400px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #00000033;
+    .heading {
+      text-align: center;
+      font-size: 23px;
+      color: $label-color;
+    }
+    .content {
+      padding: 20px;
+      .form-field {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        &.toggle {
+          display: flex;
+          justify-content: space-between;
+        }
+        .label {
+          font-size: 15px;
+          color: $label-color;
+          margin: 0;
+          margin-bottom: 5px;
+          font-family: "Open Sans", sans-serif;
+        }
+        .slide-value {
+          font-size: 25px;
+          color: $value-color;
+          margin: 0;
+          font-family: "Open Sans", sans-serif;
+        }
+        mat-slider {
+          width: 100%;
+        }
+        .slider-suffix {
+          display: flex;
+          justify-content: space-between;
+          .limit {
+            font-size: 10px;
+            color: $limit-color;
+          }
+        }
+      }
+      .repayment-select,
+      .emi-input {
+        width: 100%;
+        font-size: 20px;
+        color: $value-color;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+  }
+  .second-container {
+    box-shadow: 0px 0px 20px #00000033;
+    width: fit-content;
+    margin-left: 10px;
+    padding: 40px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: transparent linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0%
+      0% no-repeat padding-box;
+    color: #ffffff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    .field {
+      margin: 20px;
+      .label {
+        text-align: center;
+        color: rgb(226, 226, 226);
+        font-size: 15px;
+        margin: 5px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .value {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+    .btn {
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 118px;
+      height: 45px;
+      margin: 15px;
+      font-family: "Montserrat", sans-serif;
+      box-shadow: 0px 0px 20px #00000033;
+      border-radius: 24px;
+      opacity: 1;
+      letter-spacing: 0px;
+      color: $label-color;
+      background-color: white;
+      padding: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-shadow: 0px 0px 20px #00000033;
+      color: #663399;
+    }
+  }
+}

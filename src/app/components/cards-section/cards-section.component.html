@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="column column-1">
+        <app-cards *ngFor="let col1 of col1Cards" [imageUrl]="col1.imageUrl" [heading]="col1.heading" [content]="col1.content" [isPurple]="col1.isPurple"></app-cards>
+    </div>
+    <div class="column column-2">
+        <app-cards *ngFor="let col2 of col2Cards" [imageUrl]="col2.imageUrl" [heading]="col2.heading" [content]="col2.content" [isPurple]="col2.isPurple"></app-cards>
+    </div>
+</div>

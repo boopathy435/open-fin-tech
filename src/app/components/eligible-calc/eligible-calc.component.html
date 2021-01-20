@@ -1,0 +1,62 @@
+
+<div class="container">
+    <div class="first-container">
+    <div class="heading">
+        Eligibility Calculator
+    </div>
+    <div class="content">
+        <div class="form-field">
+            <p class="label">Monthly Income</p>
+            <p class="slide-value">{{selectedIncome | currency:'INR':true:'1.0'}}</p> 
+            <mat-slider [min]="incomeMin" [max]="incomeMax" step="10" [(value)]="selectedIncome"></mat-slider>
+            <div class="slider-suffix">
+                <span class="limit min-value">{{incomeMin | currency:'INR':true:'1.0'}}</span>
+                <span class="limit max-value">{{incomeMax | currency:'INR':true:'1.0'}}</span>
+            </div>
+        </div> 
+        
+        <div class="form-field">
+            <p class="label">Monthly Expense</p>
+            <p class="slide-value">{{selectedExpense | currency:'INR':true:'1.0'}}</p> 
+            <mat-slider [min]="expenseMin" [max]="expenseMax" step="10" [(value)]="selectedExpense"></mat-slider>   
+        </div>
+
+        <div class="form-field">
+        <mat-form-field class="repayment-select">
+            <mat-label>Repayment Tenure</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let time of tenure" [value]="time.value">
+                {{time.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="form-field toggle">
+          <span>Do you have any existing loans?</span>
+          <mat-slide-toggle labelPosition='before'></mat-slide-toggle>
+        </div>
+        <div class="form-field">
+          <mat-form-field class="emi-input">
+            <mat-label>EMI of existing loan(optional)</mat-label>
+            <input matInput placeholder="EMI of existing loan" [value]="15000 | currency:'INR':true:'1.0'">
+          </mat-form-field>
+        </div>
+    </div>  
+</div>
+<div class="second-container">
+    <div class="content">
+        <div class="field">
+            <div class="label">Loan Amount</div>
+            <div class="value">{{100000| currency:'INR':true:'1.0'}}</div>
+        </div>
+        <div class="field">
+            <div class="label">Your EMI will be</div>
+            <div class="value">{{15000| currency:'INR':true:'1.0'}}</div>
+        </div>
+        <div class="btn">
+            GET MONEY   
+        </div>
+    </div>
+</div>
+</div>
