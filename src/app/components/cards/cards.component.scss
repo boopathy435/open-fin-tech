@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 :host {
-  margin: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .container {
   background: transparent;
@@ -24,7 +27,7 @@
 .purple {
   background-color: #663399;
   border: 0;
-  opacity: 0.8;
+  opacity: 0.6;
   box-shadow: none;
   color: white;
 }
